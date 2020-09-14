@@ -1,7 +1,5 @@
 # :sparkles: Enactus IIITD Website
-## The official website of project The Well-Being Adda - An initiative by Enactus IIITD
-Project The Well-Being Adda Official Website
-
+The official website of project The Well-Being Adda - An initiative by Enactus IIITD
 
 ### :rocket: Getting Started
 * `git clone https://github.com/aastha985/Enactus-IIITD-Website.git`
