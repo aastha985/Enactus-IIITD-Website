@@ -1,4 +1,6 @@
-# :sparkles: Enactus IIITD Project The Well-Being Adda Official Website
+# :sparkles: Enactus IIITD Website
+## The official website of project The Well-Being Adda - An initiative by Enactus IIITD
+Project The Well-Being Adda Official Website
 
 
 ### :rocket: Getting Started
