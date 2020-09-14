@@ -7,4 +7,4 @@ The official website of project The Well-Being Adda - An initiative by Enactus I
 * To setup prettier go to extension settings and set config file path to `./.prettierrc.json`.
 * `npm install`
 * `npm run dev` or `npm start`
-* Go to localhost:3000/
+* Go to `localhost:3000`
