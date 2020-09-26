@@ -11,9 +11,25 @@ const {
 	userLeave,
 	getRoomUsers,
 } = require("./utils/users");
+var firebase = require("firebase");
+
+// Add the Firebase products that you want to use
+var config = {
+	apiKey: "AIzaSyDQ-2fHSstjagBY9anA4am5Ek9bYxEgHGw",
+	authDomain: "enactus-iiitd-website.firebaseapp.com",
+	databaseURL: "https://enactus-iiitd-website.firebaseio.com",
+	projectId: "enactus-iiitd-website",
+	storageBucket: "enactus-iiitd-website.appspot.com",
+	messagingSenderId: "578304334099",
+	appId: "1:578304334099:web:96ce6ce07fd1aca06ea2e6",
+	measurementId: "G-VDSF50HYSX"
+};
+firebase.initializeApp(config);
+
 
 const indexRoutes = require("./routes/index");
 const chatRoutes = require("./routes/chat");
+const { time } = require("console");
 
 app.use(express.static(__dirname + "/public"));
 app.set("view engine", "ejs");
@@ -45,6 +61,22 @@ io.on("connection", socket => {
 			room: user.room,
 			users: getRoomUsers(user.room),
 		});
+
+		// Show chat history of the room connected to 
+		firebase.database().ref(user.room).child("messages").once("value", function(snapshot) {
+			firebase.database().ref(user.room).child("messages").child(snapshot.numChildren()).once("value", function(snapshot2){
+				snapshot.forEach(function(childSnapshot) {
+					// Need to add time also, shows the time the message gets broadcasted for now
+					io.to(user.room).emit("message", formatMessage(childSnapshot.val().sentByNickname, childSnapshot.val().message));
+				});
+
+			}).catch((e) => {
+				console.log(e);
+			});
+		}).catch((e) => {
+			console.log(e);
+		});
+
 	});
 
 	//io.emit --> goes to everyone
@@ -69,6 +101,23 @@ io.on("connection", socket => {
 	socket.on("chatMessage", msg => {
 		const user = getCurrentUser(socket.id);
 		if (user) {
+			
+			// Storing the message in firebase
+			firebase.database().ref(user.room).child("messages").once("value", function(snapshot) {
+				firebase.database().ref(user.room).child("messages").child(snapshot.numChildren()).once("value", function(snapshot2) {
+					firebase.database().ref(user.room).child("messages").child(snapshot.numChildren()).update({
+						message: msg,
+						sentByNickname: user.nickname,
+						// Need to get time the message is sent to store on database
+						// messageTime: timeOfMesage
+					}).catch((e) => {
+						console.log(e);
+					});
+				}).catch((e) => {
+					console.log(e);
+				});
+			});
+			
 			io.to(user.room).emit("message", formatMessage(user.nickname, msg));
 		}
 	});
