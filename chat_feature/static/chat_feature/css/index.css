@@ -1,0 +1,125 @@
+html {
+    margin: 0;
+    height: 100%;
+}
+
+body {
+    /* background-color: #FDEEEC ; */
+    /* E3CACD */
+    margin: 0;
+    height: 100%;
+    font-family: 'Open Sans', sans-serif;
+    background-color: #fff3f1;
+}
+
+.parallax1 {
+    background: url(../images/bg3.png);
+    min-height: 80%;
+    margin-top: 55px;
+    position: relative;
+    opacity: 0.8;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+.parallax2 {
+    background: url(../images/bg2.png);
+    min-height: 35%;
+    position: relative;
+    opacity: 0.8;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+.parallax3 {
+    background: url(../images/bg3.jpg);
+    min-height: 35%;
+    position: relative;
+    opacity: 0.8;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+.bg-dark {
+    background-color: #2D2B3B!important;
+}
+
+.navbar-dark .navbar-brand {
+    font-family: 'Staatliches', cursive;
+    color: #e7b3ba;
+    font-size: 1.5em;
+}
+
+.nav-item {
+    font-family: 'Bebas Neue', cursive;
+    letter-spacing: 0.07rem;
+    font-size: 1.1em;
+}
+
+.heading {
+    font-family: 'Sue Ellen Francisco', cursive;
+    color: aliceblue;
+}
+
+.content {
+    margin-right: 30px;
+    margin-left: 30px;
+    margin-bottom: 50px;
+    text-indent: 10px;
+}
+
+.sub-heading {
+    font-family: 'Staatliches', cursive;
+    color: aliceblue;
+    font-size: 2rem;
+}
+
+.heading-content {
+    font-family: 'Staatliches', cursive;
+    color: black;
+    font-size: 2rem;
+    margin: 30px;
+    font-size: 2.5em;
+}
+
+.parallax-text {
+    margin-top: 70px;
+    font-family: 'Sue Ellen Francisco', cursive;
+    color: aliceblue;
+    font-size: 75px;
+}
+
+.card-container {
+    margin-top: 50px;
+}
+
+.ending-text {
+    color: aliceblue;
+    margin-top: 40px;
+    margin-bottom: 20px;
+    text-indent: 0;
+    opacity: 0.7;
+}
+
+#foot {
+    background-color: #2D2B3B;
+}
+
+/* #textbg1 {
+    background: url(textbg1.png);
+}
+
+#textbg2 {
+    background: url(textbg2.png);
+}
+
+#textbg1 #textbg2 {
+    background-position: center;
+    background-repeat: no-repeat;
+} */

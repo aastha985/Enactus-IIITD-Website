@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Well-Being Adda</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css2?family=Staatliches&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Sue+Ellen+Francisco&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'chat_feature/css/index.css' %}">
+    
+</head>
+<body>
+    <nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="#">
+                {% load static %}
+                <img src="{% static 'chat_feature/images/White_with_flower_Icon_Cropped.png' %}" width="30" height="30" class="d-inline-block align-top mr-1" alt="" loading="lazy">
+                Well-Being Adda
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-between" id="navbarNavDropdown">
+            <ul class="navbar-nav">
+                <li class="nav-item active">
+                <a class="nav-link" href="#">Home<span class="sr-only"></span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="realtimeChatIndex.html">Chatrooms<span class="sr-only"></span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">About us<span class="sr-only"></span></a>
+                </li>
+            </ul>
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link" href="/sign_up">Sign up<span class="sr-only"></span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/login">Log in<span class="sr-only"></span></a>
+                </li>
+            </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="parallax1">
+        <div class="container">
+            <div class="d-flex row mx-0 align-items-center">
+                <div class="col-12 col-md-6 text-center">
+                    <div class="my-5 d-none d-md-inline">
+                        <h1 class="sub-heading">Enactus IIITD</h1>
+                        <h1 class="display-2 heading">Well-Being Adda</h1>
+                    </div>
+                </div>
+                <div class="col-12 col-md-6 content-align-left">
+                    {% load static %}
+                    <img src="{% static 'chat_feature/images/White_with_Flower_Icon_Floral_Logo.png' %}" class="img-responsive" width="100%">
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="container">
+        <div class="d-flex row mx-0 align-items-center">
+            <div class="col-12 col-md-6 text-justify">
+                <h1 class="display5 heading-content text-center">Heading 1</h1>
+                <p class="content">Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus laboriosam doloremque ratione ex quo tempora unde consequatur quisquam molestias nemo impedit obcaecati aut, reprehenderit incidunt delectus temporibus enim vel soluta. Eveniet ipsam vero, culpa beatae cum illum assumenda delectus, eos modi maiores amet, adipisci nihil pariatur hic quia quaerat. Aperiam.</p>
+            </div>
+            <div class="col-6 d-none d-md-block" id="textbg1">
+                <img src="{% static 'chat_feature/images/textbg1.png' %}" alt="textbg1" class="img-responsive" width="100%">
+            </div>
+        </div>
+        <div class="d-flex row mx-0 align-items-center">
+            <div class="col-6 d-none d-md-block" id="textbg2">
+                <img src="{% static 'chat_feature/images/textbg2.png' %}" alt="textbg2" class="img-responsive" width="100%">
+            </div>
+            <div class="col-12 col-md-6 text-justify">
+                <h1 class="display5 heading-content text-center">Heading 2</h1>
+                <p class="content">Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus laboriosam doloremque ratione ex quo tempora unde consequatur quisquam molestias nemo impedit obcaecati aut, reprehenderit incidunt delectus temporibus enim vel soluta. Eveniet ipsam vero, culpa beatae cum illum assumenda delectus, eos modi maiores amet, adipisci nihil pariatur hic quia quaerat. Aperiam.</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="parallax3 d-flex align-items-baseline">
+        <div class="container d-flex justify-content-center">
+            <h1 class="display3  parallax-text">Our Mission</h1>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="d-flex row mx-0 align-items-center">
+            <div class="col-12 col-md-6 text-justify">
+                <h1 class="display5 heading-content text-center">Heading 1</h1>
+                <p class="content">Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus laboriosam doloremque ratione ex quo tempora unde consequatur quisquam molestias nemo impedit obcaecati aut, reprehenderit incidunt delectus temporibus enim vel soluta. Eveniet ipsam vero, culpa beatae cum illum assumenda delectus, eos modi maiores amet, adipisci nihil pariatur hic quia quaerat. Aperiam.</p>
+                <p class="content">Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis laboriosam praesentium doloribus temporibus incidunt minus laborum totam dolorem aspernatur hic sunt maxime, mollitia id delectus, dignissimos saepe eaque autem dolore.</p>
+            </div>
+            <div class="col-6 d-none d-md-block" id="textbg1">
+                <img src="{% static 'chat_feature/images/textbg1.png' %}" alt="textbg1" class="img-responsive" width="100%">
+            </div>
+        </div>
+    </div>
+
+    <div class="parallax2 d-flex align-items-baseline">
+        <div class="container d-flex justify-content-center">
+            <h1 class="display3  parallax-text">Meet the team</h1>
+        </div>
+    </div>
+
+    <div class="container card-container px-0 px-md-3 px-lg-5">
+        <div class="d-flex row mx-0 align-items-center justify-content-center">
+            <div class="col-6 col-md-4">
+                <div class="card m-1 m-md-3 bg-info text-white">
+                    <img class="card-img-top" src="{% static 'chat_feature/images/usericon.png' %}" alt="Card image cap">
+                    <div class="card-body">
+                        <h5 class="card-title">Member</h5>
+                        <p class="card-text">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Officiis, ipsa neque!</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-6 col-md-4">
+                <div class="card m-1 m-md-3 bg-info text-white">
+                    <img class="card-img-top" src="{% static 'chat_feature/images/usericon.png' %}" alt="Card image cap">
+                    <div class="card-body">
+                        <h5 class="card-title">Member</h5>
+                        <p class="card-text">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Officiis, ipsa neque!</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-6 col-md-4">
+                <div class="card m-1 m-md-3 bg-info text-white">
+                    <img class="card-img-top" src="{% static 'chat_feature/images/usericon.png' %}" alt="Card image cap">
+                    <div class="card-body">
+                        <h5 class="card-title">Member</h5>
+                        <p class="card-text">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Officiis, ipsa neque!</p>
+                    </div>
+                </div>
+            </div>
+        </div>  
+    </div>
+
+    <div class="border-top border-secondary mt-5" id="foot">
+        <div class="container">
+            <p class="content ending-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores sunt veniam atque voluptatibus est distinctio culpa dolore eveniet neque labore alias non officiis odit voluptates quia sint, deserunt repudiandae? Excepturi!</p>
+            <div class="d-flex row mx-0 align-items-center">
+                <div class="col-6 text-center mb-5">
+                    <p class="content ending-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores, aliquam.</p>
+                </div>
+                <div class="col-6 text-center mb-5">
+                    <p class="content ending-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos, quos!</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+</body>
+</html>
