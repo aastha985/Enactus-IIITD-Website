@@ -9,21 +9,21 @@ def index(request):
 
 def log_in(request):
     if request.method == 'POST':
-        username = request.POST['username'] 
-        password = request.POST['password1'] 
+        username = request.POST['username']
+        password = request.POST['password1']
         #print(username)
-        user = authenticate(request, username = username, password = password) 
-        if user is not None: 
-            login(request, user) 
-            return redirect('chat_feature:home') 
-        else: 
-            messages.error(request, 'Invalid Credentials') 
-    return render(request, 'chat_feature/login.html') 
+        user = authenticate(request, username = username, password = password)
+        if user is not None:
+            login(request, user)
+            return redirect('chat_feature:home')
+        else:
+            messages.error(request, 'Invalid Credentials')
+    return render(request, 'chat_feature/login.html')
 
 def sign_up(request):
     if request.method == 'POST':
-        username = request.POST['username'] 
-        password = request.POST['password1'] 
+        username = request.POST['username']
+        password = request.POST['password1']
         confirm_password = request.POST['password2']
 
         if password == confirm_password:
@@ -39,5 +39,5 @@ def sign_up(request):
         else:
             messages.error(request, 'Passwords do not match!')
             return redirect("chat_feature:sign-up")
-        
+
     return render(request, "chat_feature/sign_up.html")

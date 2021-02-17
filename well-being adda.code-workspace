@@ -1,0 +1,15 @@
+{
+    "folders": [
+        {
+            "path": "."
+        }
+    ],
+    "settings": {
+        "python.pythonPath": "wba\\Scripts\\python.exe",
+        "git.ignoreLimitWarning": true,
+        "files.exclude": {
+            ".git": true,
+            "**/.git": false
+        },
+    }
+}
