@@ -20,7 +20,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 # See https://docs.djangoproject.com/en/3.0/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = ''
+SECRET_KEY = '0c*ptag*)+ts7@*c208r^91ottvcd(9h_#e#4c9ar_aqo^s0q('
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
@@ -37,7 +37,8 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'chat_feature'
+    'chat_feature',
+    'channels'
 ]
 
 MIDDLEWARE = [
@@ -69,7 +70,7 @@ TEMPLATES = [
 ]
 
 WSGI_APPLICATION = 'wb.wsgi.application'
-
+ASGI_APPLICATION = 'wb.asgi.application'
 
 # Database
 # https://docs.djangoproject.com/en/3.0/ref/settings/#databases
