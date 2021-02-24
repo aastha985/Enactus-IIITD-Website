@@ -41,3 +41,13 @@ def sign_up(request):
             return redirect("chat_feature:sign-up")
 
     return render(request, "chat_feature/sign_up.html")
+
+
+def chatIndex(request):
+    return render(request, 'chat_feature/realtimeChatindex.html')
+
+
+def room(request, room_name):
+    return render(request, 'chat_feature/realtimeChat.html', {
+        'room_name': room_name
+    })
