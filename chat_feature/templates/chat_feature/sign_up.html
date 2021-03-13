@@ -7,7 +7,7 @@ Sign Up
 {% block body %}
 <h2>Sign up</h2>
 {% load static %}
-  <form method="post" action="{% url 'chat_feature:sign-up' %}">
+  <form method="post" action="{% url 'chat_feature:sign_up' %}">
     {% csrf_token %}
         <label>Username</label>
         <input type="text" name="username">
@@ -15,8 +15,8 @@ Sign Up
         <input type="password" name="password1">
         <label>Confirm Password</label>
         <input type="password" name="password2">
-        
+
     <button type="submit">Sign up</button>
   </form>
-  
+
 {% endblock %}

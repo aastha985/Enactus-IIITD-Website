@@ -7,7 +7,7 @@ from django.contrib import messages
 def index(request):
     return render(request, "chat_feature/index.html")
 
-def log_in(request):
+def login(request):
     if request.method == 'POST':
         username = request.POST['username']
         password = request.POST['password1']
@@ -15,7 +15,7 @@ def log_in(request):
         user = authenticate(request, username = username, password = password)
         if user is not None:
             login(request, user)
-            return redirect('chat_feature:home')
+            return redirect('home')
         else:
             messages.error(request, 'Invalid Credentials')
     return render(request, 'chat_feature/login.html')
@@ -29,25 +29,24 @@ def sign_up(request):
         if password == confirm_password:
             if User.objects.filter(username=username).exists():
                 messages.error(request, 'Username taken!')
-                return redirect('chat_feature:sign-up')
+                return redirect('home')
             else:
                 user = User.objects.create_user(username = username, password = password)
                 user.save()
-                #print("user registered")
                 login(request, user)
-                return redirect('chat_feature:home')
+                return redirect('home')
         else:
             messages.error(request, 'Passwords do not match!')
-            return redirect("chat_feature:sign-up")
+            return redirect("sign_up")
 
     return render(request, "chat_feature/sign_up.html")
 
 
-def chatIndex(request):
-    return render(request, 'chat_feature/realtimeChatindex.html')
+def chat_index(request):
+    return render(request, 'chat_feature/chat_index.html')
 
 
 def room(request, room_name):
-    return render(request, 'chat_feature/realtimeChat.html', {
+    return render(request, 'chat_feature/chat_room.html', {
         'room_name': room_name
     })
