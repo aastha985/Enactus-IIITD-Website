@@ -2,6 +2,7 @@ from django.shortcuts import render, redirect
 from django.contrib.auth import login, logout, authenticate
 from django.contrib.auth.models import User
 from django.contrib import messages
+from django.contrib.auth.decorators import login_required
 
 # Create your views here.
 def index(request):
@@ -42,12 +43,16 @@ def sign_up(request):
 
     return render(request, "chat_feature/sign_up.html")
 
+def logout_view(request):
+    logout(request)
+    return redirect("")
 
+@login_required(login_url = '/login/')
 def chatIndex(request):
-    return render(request, 'chat_feature/realtimeChatindex.html')
+    return render(request, 'chat_feature/chat.html')
 
-
+@login_required(login_url = '/login/')
 def room(request, room_name):
-    return render(request, 'chat_feature/realtimeChat.html', {
+    return render(request, 'chat_feature/room.html', {
         'room_name': room_name
     })
