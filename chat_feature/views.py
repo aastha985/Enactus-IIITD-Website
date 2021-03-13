@@ -43,9 +43,10 @@ def sign_up(request):
 
     return render(request, "chat_feature/sign_up.html")
 
+@login_required(login_url = '/login/')
 def logout_view(request):
     logout(request)
-    return redirect("")
+    return redirect('index')
 
 @login_required(login_url = '/login/')
 def chatIndex(request):

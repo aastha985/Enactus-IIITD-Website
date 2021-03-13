@@ -7,6 +7,7 @@ app_name = 'chat_feature'
 
 urlpatterns = [
     path("", views.index, name="home"),
+    path("home/", views.index, name=""),
     path('sign_up/', views.sign_up, name="sign-up"),
     path('login/', views.log_in, name="login"),
     path('chat/', views.chatIndex, name='chatIndex'),
